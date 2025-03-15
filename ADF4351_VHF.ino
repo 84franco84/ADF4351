@@ -15,7 +15,6 @@ void setup()
   lcd.clear();
   lcd.print("- START -");
   ADF4351.begin();
-  //AD8369.begin();  
   }
   
 int64_t f; int dbm;
@@ -25,7 +24,6 @@ void loop()
   //while(true){};
   delay(5);
   lcd.clear();
-  //f=100000000;  Massimo valore di clk accettato dal AD9951
   f=220000000;
   dbm=2;         // Scelte: -4,-1, 2, 5dBm ->  (0,2V; 0,28; 0,4; 0,56V)
   //
@@ -38,7 +36,7 @@ void loop()
     }
   else
     lcd.print("Errore!");
-  //
+  // Esempio di scansione
   // ADF4351.scansione(200000000,1000000000,1000000);
   while(true){};
   }
